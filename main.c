@@ -10,7 +10,7 @@ int main() {
         fflush(stdin);
         printf("Sadece Sayi Giriniz\nLutfen n Degerini Tekrar Giriniz\n");
         goto takeN;
-    }
+    }                                       //Kullanıcıdan değerleri alıyoruz ve sayı yazdığından emin oluyoruz.
     takeP:
     if (scanf("%lf", &p) != 1){
         fflush(stdin);
@@ -28,10 +28,10 @@ int main() {
     for (int i = 1; i <=n ; ++i) {
         if(i==1)
 
-            printf("(x%d^%0.1lf",i,p);
+            printf("(x%d^%0.1lf",i,p);      //i=1 değeri için parantezi açıyoruz.
         else
-            printf("+x%d^%0.1lf",i,p);
+            printf("+x%d^%0.1lf",i,p);      //Diğer değerleri aynen yazdırıyoruz.
     }
-    printf(")^1/%0.1lf",p);
+    printf(")^1/%0.1lf",p);                 //Parantezi kapatıp 1/p yi yazdırıyoruz.
     return 0;
 }
